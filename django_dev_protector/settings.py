@@ -1,0 +1,20 @@
+import os
+from django.conf import settings
+
+DIR_NAME = os.path.dirname(__file__)
+
+PROTECT_STATUS_DEFAULT = False
+
+PROTECT_STATUS_VARIABLE = 'PROTECT_STATUS_VARIABLE'
+PROTECT_HASH_VARIABLE = 'PROTECT_HASH_VARIABLE'
+PROTECT_STATUS_FILE = '/protect_status.conf'
+PROTECT_HASH_FILE = '/protect_hash.conf'
+
+TEMPLATE_NAME = 'django_dev_protector/index.html' if not settings.PROTECT_TEMPLATE_NAME else PROTECT_TEMPLATE_NAME
+
+REDIRECT_URL = None if not settings.PROTECT_REDIRECT_URL else PROTECT_REDIRECT_URL
+
+
+from django_dev_protector.setup import get_status, get_hash
+os.environ[PROTECT_STATUS_VARIABLE] = get_status()
+os.environ[PROTECT_HASH_VARIABLE] = get_hash()

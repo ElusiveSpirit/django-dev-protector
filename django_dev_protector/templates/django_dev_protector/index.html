@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The work was not paid</title>
+  </head>
+  <body>
+    <h1>The work was not paid.</h1>
+    <h3>Owner of this site has not paid to the developer</h3>
+    {% if redirect_url %}
+    <h4>In 10 seconds you will be redirected to another site <a href="{{ redirect_url }}">{{ redirect_url }}</a></h4>
+    <script>
+    setTimeout(function() {
+      location.href = "{{ redirect_url }}";
+    }, 10000);
+    </script>
+    {% endif %}
+  </body>
+</html>

@@ -10,9 +10,9 @@ PROTECT_HASH_VARIABLE = 'PROTECT_HASH_VARIABLE'
 PROTECT_STATUS_FILE = '/protect_status.conf'
 PROTECT_HASH_FILE = '/protect_hash.conf'
 
-TEMPLATE_NAME = 'django_dev_protector/index.html' if not settings.PROTECT_TEMPLATE_NAME else PROTECT_TEMPLATE_NAME
+TEMPLATE_NAME = 'django_dev_protector/index.html' if not hasattr(settings, 'PROTECT_TEMPLATE_NAME') else settings.PROTECT_TEMPLATE_NAME
 
-REDIRECT_URL = None if not settings.PROTECT_REDIRECT_URL else PROTECT_REDIRECT_URL
+REDIRECT_URL = None if not hasattr(settings, 'PROTECT_REDIRECT_URL') else settings.PROTECT_REDIRECT_URL
 
 
 from django_dev_protector.setup import get_status, get_hash

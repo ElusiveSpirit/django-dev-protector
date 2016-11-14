@@ -6,6 +6,9 @@ It can be used in situations when a client don't want to pay your work. The app 
 
 Installation
 ------------
+```
+pip install django-dev-protector
+```
 settings.py
 ```
 INSTALLED_APPS = [

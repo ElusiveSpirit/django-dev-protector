@@ -39,5 +39,5 @@ def get_status():
     res = get_from_file(STATUS_FILE_NAME)
     if not res:
         save_status(PROTECT_STATUS_DEFAULT)
-        return PROTECT_STATUS_DEFAULT
+        return str(PROTECT_STATUS_DEFAULT)
     return res

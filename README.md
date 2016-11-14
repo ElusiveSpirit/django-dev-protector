@@ -1,4 +1,4 @@
-django-dev-protector
+django-dev-protector [![Build Status](https://travis-ci.org/ElusiveSpirit/django-dev-protector.svg?branch=master)](https://travis-ci.org/ElusiveSpirit/django-dev-protector)
 ====================
 The app for freelance developers, that blocks site if needed.  
 
@@ -54,5 +54,6 @@ An example
 ```
 curl \
   -H "Content-Type: application/json" \
-  -X POST -d '{"key": "<SECRET_KEY>", "status": true}' \ http://<your_domain>/django_dev_protector/
+  -X POST -d '{"key": "<SECRET_KEY>", "status": true}' \
+  http://<your_domain>/django_dev_protector/
 ```

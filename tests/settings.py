@@ -9,6 +9,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+PROTECT_REDIRECT_URL = 'http://ya.ru'
 
 INSTALLED_APPS = [
     'django.contrib.admin',

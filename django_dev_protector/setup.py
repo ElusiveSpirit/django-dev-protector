@@ -1,10 +1,9 @@
 import os
 
 from .settings import (PROTECT_STATUS_FILE, PROTECT_STATUS_VARIABLE,
-                       PROTECT_STATUS_DEFAULT, DIR_NAME, PROTECT_HASH_FILE)
+                       PROTECT_STATUS_DEFAULT, DIR_NAME)
 
 STATUS_FILE_NAME = DIR_NAME + PROTECT_STATUS_FILE
-HASH_FILE_NAME = DIR_NAME + PROTECT_HASH_FILE
 
 
 def save_to_file(text, file_name):
@@ -42,8 +41,3 @@ def get_status():
         save_status(PROTECT_STATUS_DEFAULT)
         return PROTECT_STATUS_DEFAULT
     return res
-
-
-def get_hash():
-    """Get saved hash from file"""
-    return get_from_file(HASH_FILE_NAME)

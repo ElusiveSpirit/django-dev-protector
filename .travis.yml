@@ -1,5 +1,12 @@
 language: python
 python:
-  - "3.5"
-install: "pip install -r requirements.conf"
+- '3.5'
+install: pip install -r requirements.conf
 script: python manage.py test
+deploy:
+  provider: pypi
+  user: Solleks
+  password:
+    secure: irXWJnMvz8xoOo7N9p8nac2wyHB8x5J0mAo9NvfX+Jv6T3+KfmAOOLMYoMBhmtxlc60tQV9rkUIG2+GDQoWK0gQXIumPfChBKELWfz4d5D73q/NHgnsiwGP4T4SM3ow3Z3uKJFLe20R4jxILwCbBQQmZ2vZoeGOJpEsGYj+bhsHNGRx5mb/Gtk2X0+tFA5cZsd1FMvnOige89E5SQds8QI//k+eErpgk0KORBzhOGDbgrdAJWcNOA2wFZIrqgMZyjZ+NhFXAyxS7BzWM8zwfFUWr5890GphH8igP/PQIvbtjCMu+x8kLMQr6S8RmeDFka6POHCYaLQOoGOVo4/r9+aVAXFd+Js+caJcmo+TWSqb1gy+mNzch1OHHGVz8WRbpvHSwzYCd35x5ScVQJqNVB2Cs4w3W/7yuoCRNvXXU/bZptVwQnukFUvlBA/2KidsXHCVPu+psFpN6r5FVKRtcyZgPW86dAqEqUqPezVYizIEXVEFpMv1EXz8zpb3rafow75sSSKz8qADu24Q4LCBkQaDyStrAw0ldyLBf3rRVZGtgeFtp3EWkhY3NCzsNPfd6AWXN3xqIcNo3n9LmzX2CTKUzJT1Z5NzaQcIDBHDTSWQrIKKMZ1aEWf4t3OZO9ehEGnYIHxesuPCggT1lfysFylHVJo+GwgId1otF53Ptg4M=
+  on:
+    branch: production

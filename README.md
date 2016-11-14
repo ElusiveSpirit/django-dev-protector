@@ -41,7 +41,7 @@ By default server is unblocked
 
 Usage
 -----
-You save your django SECRET_KEY from settings
+You need to save your django SECRET_KEY from settings first
 ```
 SECRET_KEY = '...
 ```

@@ -16,7 +16,7 @@ class ControlMiddleware(MiddlewareMixin):
             if data['key'] == settings.SECRET_KEY:
                 from .setup import save_status
                 environ[PROTECT_STATUS_VARIABLE] = str(data['status'])
-                save_status(str(data['status']))
+                save_status(data['status'])
                 return redirect('/')
 
         if environ.get(PROTECT_STATUS_VARIABLE) == 'True':

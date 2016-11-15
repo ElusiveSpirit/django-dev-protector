@@ -60,3 +60,12 @@ curl \
   -X POST -d '{"key": "<SECRET_KEY>", "status": true}' \
   http://<your_domain>/django_dev_protector/
 ```
+
+Localize
+--------
+The app template support Russian. You only need to switch Russian in settings.
+```
+LANGUAGE_CODE = 'ru-ru'
+
+USE_I18N = True
+```

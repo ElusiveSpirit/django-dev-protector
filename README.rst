@@ -1,11 +1,15 @@
 django-dev-protector
 ====================
+https://github.com/ElusiveSpirit/django-dev-protector
+
 The app for freelance developers, that blocks site if needed.
 
 It can be used in situations when a client don't want to pay your work. The app blocks all requests to the site and shows a message of this situation.
 
 Installation
-------------
+
+pip install django-dev-protector
+  
 settings.py
 ```
 INSTALLED_APPS = [
@@ -38,7 +42,7 @@ By default server is unblocked
 
 Usage
 -----
-You save your django SECRET_KEY from settings
+You need to save your django SECRET_KEY from settings first
 ```
 SECRET_KEY = '...
 ```
@@ -56,4 +60,13 @@ curl \
   -H "Content-Type: application/json" \
   -X POST -d '{"key": "<SECRET_KEY>", "status": true}' \
   http://<your_domain>/django_dev_protector/
+```
+
+Localize
+--------
+The app template support Russian. You only need to switch Russian in settings.
+```
+LANGUAGE_CODE = 'ru-ru'
+
+USE_I18N = True
 ```
